@@ -73,10 +73,7 @@ sub Three {
 sub _error {
     my $x = shift;
 
-    if($x->{err}) {
-        say $x->{err};
-        return 1;
-    }
+    return say $x->{err} if $x->{err};
 }
     
 1;
