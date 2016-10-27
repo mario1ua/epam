@@ -1,3 +1,7 @@
+**Usage**:
+
+`./city_info.pl --city New York City --filename ./cities.txt`
+
 #Test task
 Searching for answers on the internet is perfectly acceptable, but key references should be recorded.
 These exercises are to demonstrate knowledge of OO techniques, so please use them wherever possible.
