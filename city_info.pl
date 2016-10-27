@@ -7,15 +7,10 @@ use Data::Dumper;
 use FindBin qw($Bin);
 use lib "$Bin/dist";
 
-
 use Task;
-
 
 my $task = Task->new;
 $task->Two;
 $task->One; 
 $task->Three;
 
-
-
-__END__
