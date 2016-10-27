@@ -9,8 +9,7 @@ use JSON;
 
 sub new {
     my $class = shift;
-    my %x= @_;
-    my $x = \%x;
+    my $x = {@_};
 
     $x->{ua} = LWP::UserAgent->new;
 

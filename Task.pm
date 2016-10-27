@@ -16,23 +16,14 @@ $|++;
 
 sub new {
     my $class = shift;
-    my %x = @_;
-    my $x = \%x;
+    my $x = {@_};
 
-    my %args = Data::Source::Args->new->hash;
-    my $file = Data::Source::File->new(filename => $args{filename})->str;
+    $x->{args} = Data::Source::Args->new->hashref;
+    $x->{file} = Data::Source::File->new(filename => $x->{args}->{filename})->str;
+    $x->{ah_cities} = Data::Parser->new->parse( str=>$x->{file}, sep=>[qw( . , - )] )->hashes;
+    $x->{city} = (grep { $_->{City} eq $x->{args}->{city} } @{ $x->{ah_cities} })[0];;
 
-    my $ah_cities = Data::Parser->new->parse( str=>$file, sep=>[qw( . , - )] )->hashes;
-
-    my $city = (grep { $_->{City} eq $args{city} } @{$ah_cities})[0];
-
-
-    $x->{args} = \%args;
-    $x->{file} = $file;
-    $x->{ah_cities} = $ah_cities;
-    $x->{city} = $city;
-
-    $x->{err} = "No city found '$x->{args}->{city}'" unless $city;
+    $x->{err} = "No city found '$x->{args}->{city}'" unless $x->{city};
 
     bless $x, $class;
 

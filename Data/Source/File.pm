@@ -6,8 +6,7 @@ use Data::Dumper;
 
 sub new {
     my $class = shift;
-    my %x = @_;
-    my $x = \%x;
+    my $x = {@_};
 
     open my $fh, '<', $x->{filename} or die "Error opening $x->{filename}: $!";
     $x->{str} = do { local $/; <$fh> };
