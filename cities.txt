@@ -1,34 +1,3 @@
-#Test task
-Searching for answers on the internet is perfectly acceptable, but key references should be recorded.
-These exercises are to demonstrate knowledge of OO techniques, so please use them wherever possible.
- 
-
-1) Take as source the Cities provided at the end of the file and write a script city_info.pl that when 
-   passed the city name via:
-
- 	city_info.pl --city <city name> [--filename <optional filename holding the city info>]
-
-    it will print out a small summary of the details of the city. 
-
-    Please write this entirely using OO techniques.  Please write this in as few statements as possible.
-    There is no limitation on the Perl Modules you can use.
-
-
-2) Take the city example above and provide summary information for all cities
-   Please load, construct and display all city object from a data file in as few lines as possible.
-   Plus the file must be loaded into a string in one operation. (To test knowledge of an idiom).
-   Implemented this functionality.
-
- 
-3) The data set for the cities including ID, City, Country, and Population, however when a 
-   city is a capital city, it should output additionally the population of the country.
- 
-
-4) What is the difference between an Object Accessor and a Class Accessor.
-
-
-__DATA__
-
 ID. City, Country - Population
 1. Tokyo, Japan - 32,450,000
 2. Seoul, South Korea - 20,550,000
@@ -43,7 +12,7 @@ ID. City, Country - Population
 11. Manila, Philippines - 16,300,000
 12. Los Angeles, USA - 15,250,000
 13. Calcutta, India - 15,100,000
-14. Moscow, Russian Fed. - 15,000,000
+14. Moscow, Russian Federation - 15,000,000
 15. Cairo, Egypt - 14,450,000
 16. Lagos, Nigeria - 13,488,000
 17. Buenos Aires, Argentina - 13,170,000
@@ -74,7 +43,7 @@ ID. City, Country - Population
 42. Chengdu, China - 5,293,000
 43. Santiago, Chile - 5,261,000
 44. Guangzhou, China - 5,162,000
-45. St. Petersburg, Russian Fed. - 5,132,000
+45. St. Petersburg, Russian Federation - 5,132,000
 46. Kinshasa, DRC - 5,068,000
 47. Baghdad, Iraq - 4,796,000
 48. Jinan, China - 4,789,000
